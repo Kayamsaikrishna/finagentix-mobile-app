@@ -32,5 +32,21 @@
   "chatbot_title": "Fin-Agentix सहायक",
   "chatbot_welcome": "नमस्ते! मैं आपका Fin-Agentix सहायक हूँ। मैं आज आपकी कैसे मदद कर सकता हूँ?",
   "chatbot_placeholder": "अपना संदेश टाइप करें...",
-  "chatbot_send": "भेजें"
+  "chatbot_send": "भेजें",
+  "apply": "आवेदन करें",
+  "partners": "भागीदार",
+  "consumption_loans": "उपभोग ऋण",
+  "loan_applications": "ऋण आवेदन",
+  "users": "उपयोगकर्ता",
+  "analytics": "विश्लेषण",
+  "reports": "रिपोर्ट",
+  "total_applications": "कुल आवेदन",
+  "approved_loans": "अनुमोदित ऋण",
+  "pending_approval": "अनुमोदन लंबित",
+  "total_revenue": "कुल राजस्व",
+  "recent_activity": "हाल की गतिविधि",
+  "new_application": "नया आवेदन",
+  "loan_approved": "ऋण अनुमोदित",
+  "document_uploaded": "दस्तावेज़ अपलोड किया गया",
+  "disbursement_completed": "भुगतान पूर्ण"
 }

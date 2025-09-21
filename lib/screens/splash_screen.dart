@@ -73,7 +73,9 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
             const SizedBox(height: 30),
             Text(
-              translationService.translate('splash_welcome'),
+              translationService.translate(
+                'app_name',
+              ), // Changed from splash_welcome to app_name
               style: const TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,

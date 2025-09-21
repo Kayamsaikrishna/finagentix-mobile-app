@@ -32,5 +32,21 @@
   "chatbot_title": "Fin-Agentix உதவியாளர்",
   "chatbot_welcome": "ஹலோ! நான் உங்கள் Fin-Agentix உதவியாளர். இன்று உங்களுக்கு எப்படி உதவ முடியும்?",
   "chatbot_placeholder": "உங்கள் செய்தியை தட்டச்சு செய்யவும்...",
-  "chatbot_send": "அனுப்பு"
+  "chatbot_send": "அனுப்பு",
+  "apply": "விண்ணப்பிக்கவும்",
+  "partners": "பங்குதாரர்கள்",
+  "consumption_loans": "நுகர்வு கடன்கள்",
+  "loan_applications": "கடன் விண்ணப்பங்கள்",
+  "users": "பயனர்கள்",
+  "analytics": "பகுப்பாய்வு",
+  "reports": "அறிக்கைகள்",
+  "total_applications": "மொத்த விண்ணப்பங்கள்",
+  "approved_loans": "அங்கீகரிக்கப்பட்ட கடன்கள்",
+  "pending_approval": "அங்கீகாரம் நிலுவை",
+  "total_revenue": "மொத்த வருவாய்",
+  "recent_activity": "சமீபத்திய செயல்பாடு",
+  "new_application": "புதிய விண்ணப்பம்",
+  "loan_approved": "கடன் அங்கீகரிக்கப்பட்டது",
+  "document_uploaded": "ஆவணம் பதிவேற்றப்பட்டது",
+  "disbursement_completed": "பணப் பரிமாற்றம் முடிந்தது"
 }
