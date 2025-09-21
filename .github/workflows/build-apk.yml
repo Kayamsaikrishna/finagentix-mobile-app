@@ -24,6 +24,10 @@ jobs:
       with:
         flutter-version: '3.35.4'
 
+    - name: Accept Android licenses
+      run: |
+        echo "y" | sudo /usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager --licenses || true
+
     - name: Get dependencies
       run: flutter pub get
 
