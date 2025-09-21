@@ -10,7 +10,11 @@ Fin-Agentix is an AI-powered digital lending platform mobile application built w
 - User application and Admin application selection
 - Tutorial bot toggle functionality
 - Complete chatbot integration
-- Loan sector exploration
+- Comprehensive loan sector exploration
+- Loan application forms with dynamic sliders
+- User dashboard with statistics and recent activities
+- Admin dashboard with analytics and management tools
+- Settings screens for both user and admin
 - APK-ready standalone application
 
 ## Supported Languages
@@ -62,12 +66,17 @@ flutter build apk --release
 2. **Language Selection**: Choose from 12 Indian languages
 3. **App Selection**: Choose between User Application and Admin Application
 4. **User Application**: 
-   - Dashboard with loan sectors
+   - Dashboard with loan statistics and credit score
+   - Loan sectors with detailed information
+   - Loan application forms with amount and tenure sliders
+   - User profile management
+   - Settings configuration
    - Chatbot integration
    - Tutorial bot toggle
 5. **Admin Application**:
-   - Dashboard with statistics
-   - Navigation drawer with admin options
+   - Dashboard with comprehensive analytics and statistics
+   - Navigation drawer with all admin sections (Dashboard, Marketplace, Partners, Consumption Loans, Applications, Users, Analytics, Reports, Settings)
+   - Settings configuration with advanced options
    - Chatbot integration
    - Tutorial bot toggle
 
@@ -87,6 +96,8 @@ The application follows a clean architecture pattern with:
 - **Services**: TranslationService and TTSService for handling translations and text-to-speech
 - **Providers**: AppProvider for state management
 - **Screens**: Individual screens for each part of the application flow
+  - User screens: dashboard, loans, profile, settings, loan application
+  - Admin screens: dashboard, settings
 - **Widgets**: Reusable UI components
 
 ## Contributing
