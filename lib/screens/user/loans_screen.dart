@@ -4,6 +4,7 @@ import '../../models/loan_sector.dart';
 import '../../providers/app_provider.dart';
 import '../../services/translation_service.dart';
 import '../chatbot_screen.dart';
+import 'loan_application_screen.dart';
 
 class UserLoansScreen extends StatelessWidget {
   const UserLoansScreen({super.key});
@@ -120,7 +121,17 @@ class UserLoansScreen extends StatelessWidget {
                       const SizedBox(height: 10),
                       ElevatedButton(
                         onPressed: () {
-                          // Handle loan application
+                          // Navigate to loan application screen
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => LoanApplicationScreen(
+                                loanType: translationService.translate(
+                                  '${sector.id}_loan',
+                                ),
+                              ),
+                            ),
+                          );
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFF1E3A8A),

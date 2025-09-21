@@ -66,6 +66,13 @@ class _ChatbotScreenState extends State<ChatbotScreen> {
       "You can apply for multiple loans, but each application will be evaluated separately.",
       "Loan approval typically takes 24-48 hours after document verification.",
       "For any technical issues, please try restarting the application or clearing cache.",
+      "To check your credit score, go to the dashboard and look for the credit score section.",
+      "You can track your loan application status in real-time through the app.",
+      "Our interest rates start from 8.5% per annum for personal loans.",
+      "We offer flexible repayment options for all our loan products.",
+      "To update your profile information, go to the profile section and tap on edit.",
+      "For faster processing, ensure all your documents are clear and up-to-date.",
+      "You can save your loan application as a draft and complete it later.",
     ];
 
     return responses[DateTime.now().millisecondsSinceEpoch % responses.length];
@@ -106,6 +113,23 @@ class _ChatbotScreenState extends State<ChatbotScreen> {
                   return _buildMessage(_messages[index]);
                 },
               ),
+            ),
+          ),
+          // Quick action buttons
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            height: 50,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                _buildQuickAction('Loan Info'),
+                const SizedBox(width: 10),
+                _buildQuickAction('KYC Help'),
+                const SizedBox(width: 10),
+                _buildQuickAction('Application Status'),
+                const SizedBox(width: 10),
+                _buildQuickAction('Contact Support'),
+              ],
             ),
           ),
           // Input area
@@ -162,6 +186,21 @@ class _ChatbotScreenState extends State<ChatbotScreen> {
           ),
         ],
       ),
+    );
+  }
+
+  Widget _buildQuickAction(String text) {
+    return ElevatedButton(
+      onPressed: () {
+        _textController.text = text;
+        _sendMessage();
+      },
+      style: ElevatedButton.styleFrom(
+        backgroundColor: const Color(0xFF1E3A8A),
+        foregroundColor: Colors.white,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      ),
+      child: Text(text),
     );
   }
 

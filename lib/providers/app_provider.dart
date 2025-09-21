@@ -6,10 +6,12 @@ class AppProvider with ChangeNotifier {
   bool _isUserApp = true;
   bool _isTutorialEnabled = true;
   bool _isLoading = false;
+  String _currentLanguage = 'en';
 
   bool get isUserApp => _isUserApp;
   bool get isTutorialEnabled => _isTutorialEnabled;
   bool get isLoading => _isLoading;
+  String get currentLanguage => _currentLanguage;
 
   void toggleAppType() {
     _isUserApp = !_isUserApp;
@@ -36,10 +38,15 @@ class AppProvider with ChangeNotifier {
     notifyListeners();
   }
 
+  void setLanguage(String languageCode) {
+    _currentLanguage = languageCode;
+    notifyListeners();
+  }
+
   Future<void> speakWelcomeMessage() async {
     final translationService = TranslationService();
     final ttsService = TTSService();
-    
+
     final welcomeMessage = translationService.translate('welcome_voice');
     await ttsService.speak(welcomeMessage, translationService.currentLanguage);
   }

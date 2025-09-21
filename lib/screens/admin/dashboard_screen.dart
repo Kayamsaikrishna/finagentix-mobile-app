@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../../providers/app_provider.dart';
 import '../../services/translation_service.dart';
 import '../chatbot_screen.dart';
+import 'settings_screen.dart';
 
 class AdminDashboardScreen extends StatelessWidget {
   const AdminDashboardScreen({super.key});
@@ -27,22 +28,16 @@ class AdminDashboardScreen extends StatelessWidget {
               );
             },
           ),
-          PopupMenuButton(
-            icon: const Icon(Icons.more_vert),
-            itemBuilder: (context) => [
-              PopupMenuItem(
-                child: Text(translationService.translate('settings')),
-                onTap: () {
-                  // Handle settings tap
-                },
-              ),
-              PopupMenuItem(
-                child: Text(translationService.translate('logout')),
-                onTap: () {
-                  // Handle logout
-                },
-              ),
-            ],
+          IconButton(
+            icon: const Icon(Icons.settings),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const AdminSettingsScreen(),
+                ),
+              );
+            },
           ),
         ],
       ),
@@ -117,7 +112,13 @@ class AdminDashboardScreen extends StatelessWidget {
               leading: const Icon(Icons.settings),
               title: Text(translationService.translate('settings')),
               onTap: () {
-                // Handle settings tap
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AdminSettingsScreen(),
+                  ),
+                );
               },
             ),
           ],
